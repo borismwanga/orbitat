@@ -1,1 +1,9 @@
 // Specific CSS for your home-page
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    font-size: 86px;
+}
