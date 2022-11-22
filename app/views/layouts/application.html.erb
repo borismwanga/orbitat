@@ -14,7 +14,9 @@
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <div class="container-fluid">
         <div id="logo">
-          <h1><em>O</em>rbita</h1>
+          <h1 id="o">Orb</h1>
+          <h1 id="rbita">i</h1>
+          <h1 id="t">taT</h1>
         </div>
         <%# <%= link_to "#", class: "navbar-brand" do %>
           <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
@@ -49,7 +51,7 @@
                       <span class="span">—</span>
                       <span class="span">—</span>
                     </div>
-                    <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown" %>
+                    <%= image_tag "https://images.unsplash.com/photo-1463852247062-1bbca38f7805?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown" %>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                       <%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
                       <%= link_to "Log Out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
@@ -65,6 +67,7 @@
         </div>
       </div>
     </div>
+
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
