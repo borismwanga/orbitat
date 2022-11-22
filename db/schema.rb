@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_22_120756) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_22_151341) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,11 +27,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_120756) do
 
   create_table "spaceships", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "category"
     t.string "location"
     t.integer "price"
     t.text "description"
-    t.boolean "spead_of_light"
+    t.boolean "speed_of_light"
     t.integer "capacity"
     t.string "fuel_drive"
     t.string "brand"
