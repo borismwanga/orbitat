@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   delete "reservations/:id", to: "reservations#destroy"
 
   resources :users
+  resources :spaceships
 end
