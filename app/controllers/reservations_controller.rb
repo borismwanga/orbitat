@@ -19,9 +19,6 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
-  def update
-  end
-
   def destroy
   end
 

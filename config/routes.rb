@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :users
 
   # resources :spaceships
-  #   resources :reservations, except: [:index, :edit]
+  #   resources :reservations, except: [:index, :edit, :update]
 end
