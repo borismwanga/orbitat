@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_120756) do
     t.string "location"
     t.integer "price"
     t.text "description"
-    t.boolean "spead_of_light"
+    t.boolean "speed_of_light"
     t.integer "capacity"
     t.string "fuel_drive"
     t.string "brand"
