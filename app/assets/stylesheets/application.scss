@@ -11,3 +11,113 @@
 @import "components/index";
 @import "pages/index";
 
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: rgb(255, 255, 255);
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 30px;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+.search-form-control {
+  position: relative;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 2px;
+  bottom: 4px;
+  right: 4px;
+  cursor: pointer;
+}
+
+.search-form-control .form-control:focus{
+  background-color: #ffffff;
+  height: 2.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #c5c5c5;
+  border-radius: 25px;
+}
+
+.search-form-control .form-control {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.13);
+  border-radius: 25px;
+}
+
+.nav-item-one {
+  padding-right: 5em;
+  color: black;
+  cursor: pointer;
+}
+
+#navbarDropdown{
+  cursor: pointer;
+  width: 30px;
+}
+
+.nav-link {
+  color: black;
+}
+
+#add-spaceship {
+  list-style-type: none;
+}
+
+#add-spaceship:hover {
+  list-style-type: none;
+  color: rgb(144, 144, 144);
+}
+
+.btn.btn-ghost {
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 25px;
+}
+.avatar {
+  margin-left: 45px;
+  margin-right: -5px;
+}
+
+.span {
+  display: flex;
+  padding: 0%;
+  margin: -20px;
+  margin-left: 10px;
+}
+
+.burger {
+  margin-top: 5px;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.drop {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item-dropdown {
+  list-style-type: none;
+}
+
+.searchbar {
+  width: 600px;
+}
