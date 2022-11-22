@@ -4,12 +4,10 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  # root "articles#index"
-  get "reservations/new", to: "reservations#new", as: :new_reservation
-  post "reservations", to: "reservations#create"
-  get "reservations/:id", to: "reservations#show", as: :reservation
-  patch "reservations/:id", to: "reservations#update"
-  delete "reservations/:id", to: "reservations#destroy"
+  # # root "articles#index"
 
   resources :users
+
+  # resources :spaceships
+  #   resources :reservations, except: [:index, :edit]
 end
