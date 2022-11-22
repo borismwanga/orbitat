@@ -5,9 +5,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # # root "articles#index"
-
   resources :users
-
-  # resources :spaceships
-  #   resources :reservations, except: [:index, :edit, :update]
+  resources :spaceships do
+    resources :reservations, except: [:index, :edit, :update]
+  end
 end

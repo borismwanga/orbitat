@@ -20,12 +20,14 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to spaceship_path(@spaceship), status: :see_other
   end
 
   private
 
   def reservation_params
-  params.require(:reservation).permit(:start_date, :end_date)
+    params.require(:reservation).permit(:start_date, :end_date)
   end
-
 end
