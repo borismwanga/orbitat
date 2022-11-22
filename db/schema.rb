@@ -30,7 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_22_120429) do
     t.index ["user_id"], name: "index_spaceships_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", forc¢››e: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
