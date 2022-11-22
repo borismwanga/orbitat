@@ -9,5 +9,4 @@ class Spaceship < ApplicationRecord
   validates :capacity, presence: true
   validates :fuel_drive, presence: true
   validates :brand, presence: true
-
 end
