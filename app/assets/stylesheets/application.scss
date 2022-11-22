@@ -6,6 +6,7 @@
 // External libraries
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 // Your CSS partials
 @import "components/index";
@@ -15,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .navbar-lewagon {
@@ -32,7 +34,23 @@
 }
 
 #logo {
+  display: flex;
   cursor: pointer;
+}
+
+#o {
+  font-style: oblique 20deg;
+}
+
+
+#t {
+  font-style: oblique -20deg;
+}
+
+h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  margin-right: 7px;
 }
 
 .search-form-control {
@@ -120,4 +138,12 @@
 
 .searchbar {
   width: 600px;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  font-size: 86px;
 }
