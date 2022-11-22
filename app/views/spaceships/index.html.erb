@@ -1,0 +1,3 @@
+<% @spaceships.each do |spaceship| %>
+  <li class="card"><%= link_to spaceship.name, spaceship_path(spaceship) %></li>
+<% end %>
