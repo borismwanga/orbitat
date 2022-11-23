@@ -9,11 +9,9 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation.spaceship = @spaceship
     @reservation.user = current_user
-    if @reservation.save
-      redirect_to spaceship_path(@spaceship)
-    else
-      render :new
-    end
+    @reservation.save
+    redirect_to root_path
+
   end
 
   def show
