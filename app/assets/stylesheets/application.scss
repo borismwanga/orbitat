@@ -12,6 +12,13 @@
 @import "components/index";
 @import "pages/index";
 
+
+a:-webkit-any-link {
+  text-decoration: none;
+  cursor: auto;
+}
+
+
 .container-fluid {
   display: flex;
   justify-content: space-between;
@@ -36,7 +43,7 @@
 #logo {
   display: flex;
   cursor: pointer;
-}
+} 
 
 #o {
   font-style: oblique 20deg;
@@ -111,7 +118,7 @@ h1 {
 }
 .avatar {
   margin-left: 45px;
-  margin-right: -5px;
+  margin-right: 15px;
 }
 
 .span {
