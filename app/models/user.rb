@@ -9,4 +9,6 @@ class User < ApplicationRecord
 
   has_many :spaceships
   has_many :reservations
+  has_one_attached :photo
+
 end
