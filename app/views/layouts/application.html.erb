@@ -40,31 +40,18 @@
         <div id="add-spaceship">
           <%= link_to "Add a spaceship on Orbita", "#", class: "nav-link" %>
         </div>
-
-        <div class="btn btn-ghost" id="navbarSupportedContent" >
-            <ul class="navbar-nav me-auto">
-              <%# if user_signed_in? %>
-                <li>
-                  <div class="drop" data-toggle="dropdown">
-                    <div class="burger">
-                      <span class="span">—</span>
-                      <span class="span">—</span>
-                      <span class="span">—</span>
-                    </div>
-                    <%= image_tag "https://images.unsplash.com/photo-1463852247062-1bbca38f7805?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown" %>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                      <%= link_to "Log In", new_user_session_path, class: "dropdown-item" %>
-                      <%= link_to "Log Out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
-                    </div>
-                  </div>
-                </li>
-              <%# else %>
-                <!--li class="nav-item"-->
-                  <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-                <!--/li-->
-              <%# end %>
-            </ul>
+        <div class="dropdown">
+          <div class="avatar"></div >
+          <div class="dropdown-content">
+          <% if user_signed_in? %>  
+          <p><%=link_to "Profile"%></p>
+          <p><%=link_to "Log out"%></p>
+          <%else%>
+          <p><%=link_to "Log in"%></p>
+          <%end%>
+          </div>
         </div>
+
       </div>
     </div>
 
@@ -72,5 +59,21 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <div class="footer">
+      <div class="footer-content">
+        <ul class="footer-list-left">
+          <li class="footer-text">©2022, Orbitat Inc.</li>
+          <li class="footer-text"><%= link_to "Privacy", "#" %></li>
+          <li class="footer-text"><%= link_to "Terms", "#" %></li>
+          <li class="footer-text"><%= link_to "About", "#" %></li>
+        </ul>
+        <ul class="footer-list-right">
+          <li class="footer-text"></li>
+          <li class="footer-text">Eng</li>
+          <li class="footer-text"></li>
+          <li class="footer-text"><%= link_to "Assistance", "#" %></li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
