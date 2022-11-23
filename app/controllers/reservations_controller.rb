@@ -11,6 +11,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     @reservation.save
     redirect_to root_path
+
   end
 
   def show
