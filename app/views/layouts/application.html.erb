@@ -44,10 +44,10 @@
           <div class="avatar"></div >
           <div class="dropdown-content">
           <% if user_signed_in? %>  
-          <p><%=link_to "Profile"%></p>
-          <p><%=link_to "Log out"%></p>
+          <p><%=link_to "Profile", users_path%></p>
+          <p><%=link_to "Log out", destroy_user_session_path, method: :delete%></p>
           <%else%>
-          <p><%=link_to "Log in"%></p>
+          <p><%=link_to "Log in", new_user_session_path%></p>
           <%end%>
           </div>
         </div>
