@@ -8,6 +8,7 @@ class ReservationsController < ApplicationController
     @spaceship = Spaceship.find(params[:spaceship_id])
     @reservation = Reservation.new(reservation_params)
     @reservation.spaceship = @spaceship
+    @reservation.user = current_user
     if @reservation.save
       redirect_to spaceship_path(@spaceship)
     else
