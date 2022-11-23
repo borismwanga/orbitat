@@ -8,9 +8,11 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
+
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/forms";
 
 .container-fluid {
   display: flex;

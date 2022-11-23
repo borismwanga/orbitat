@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+.form-block {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-top: 50px;
+}
+
+.form-container {
+  padding: 40px;
+  width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 0px solid #c5c5c5;
+  border-radius: 25px;
+
+
+  h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+.form-inputs {
+  input {
+  background-color: rgb(255, 255, 255);
+  }
+}
+
+.form-actions {
+  background-color: rgb(227, 227, 227);
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form-actions:hover {
+  background-color: rgb(184, 183, 255);
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
