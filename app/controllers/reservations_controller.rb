@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to spaceship_path(@spaceship)
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
