@@ -45,7 +45,7 @@
           <div class="dropdown-content">
           <% if user_signed_in? %>  
           <p><%=link_to "Profile", users_path%></p>
-          <p><%=link_to "Log out", destroy_user_session_path, method: :delete%></p>
+          <p><%=link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}%></p>
           <%else%>
           <p><%=link_to "Log in", new_user_session_path%></p>
           <%end%>

@@ -1,3 +1,39 @@
-<% @spaceships.each do |spaceship| %>
-  <%= link_to spaceship.name, spaceship_path(spaceship) %>
-<% end %>
+<%# 
+<span class="center"> Have a nice journey among the stars </span>
+
+
+<div class = "container"> <h1>lorem<h1><br>
+<h1>lorem<h1><br>
+
+<h1>lorem<h1><br>
+
+</div> %>
+<section id="boat_services" class="my-5">
+  <div class="container">
+    <div class="title mb-1">
+      <h2>Lorem Ipsum </h2>
+      <p>Lorem Ipsum......</p>
+    </div>
+    <div class="row">
+    
+      <% @spaceships.each do |spaceship| %>
+      <div class="col-md-4 card-link">
+      <%= link_to spaceship_path(spaceship) do %>
+        <figure>
+          <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
+          <figcaption class="inside">
+            <h2 class="text-white"><span><%=spaceship.name%></span></h2>
+          </figcaption>
+          <figcaption class="outside">
+            <p class="small text-color mb-0"><%=spaceship.price%> $$</p>
+            <p class="text-desc"><%=spaceship.description%></p>
+          </figcaption>
+        </figure> 
+      <%end%>
+      </div>
+     <% end %>       
+
+    </div>
+    
+  </div>
+</section>

@@ -13,6 +13,11 @@
 @import "pages/index";
 
 
+a:-webkit-any-link {
+  text-decoration: none;
+  cursor: auto;
+}
+
 
 .container-fluid {
   display: flex;
