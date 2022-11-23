@@ -1,13 +1,20 @@
-<h1><%= @spaceship.name %></h1>
-<p>Name: <%=  @spaceship.name%></p>
-<p>Category: <%= @spaceship.category %></p>
-<p>Location: <%= @spaceship.location %></p>
-<p>description: <%= @spaceship.description %></p>
-<p>capacity: <%= @spaceship.capacity %></p>
-<p>speed of light: <%= @spaceship.speed_of_light %></p>
-<p>brand: <%= @spaceship.brand %></p>
-<div>
-<%= render 'shared/form'%>
-<%# <%= cl_image_tag("X-wing_2_Fathead_zcfe3q",
-      width: 400, height: 300, crop: :fill) %>
-</div> %>
+<div class="form-block">
+  <div>
+    <img src="https://loremflickr.com/380/400/spaceships" class="mb-2" id="image_reservation" alt="">
+  </div>
+  <div class="form-container">
+    <h1><%= @spaceship.name %></h1>
+    <p>Name: <%=  @spaceship.name%></p>
+    <p>Category: <%= @spaceship.category %></p>
+    <p>Location: <%= @spaceship.location %></p>
+    <p>description: <%= @spaceship.description %></p>
+    <p>capacity: <%= @spaceship.capacity %></p>
+    <p>speed of light: <%= @spaceship.speed_of_light %></p>
+    <p>brand: <%= @spaceship.brand %></p>
+    <div>
+    <%= render 'shared/form'%>
+    <%# <%= cl_image_tag("X-wing_2_Fathead_zcfe3q",
+          width: 400, height: 300, crop: :fill) %>
+    </div>
+  </div>
+</div>
