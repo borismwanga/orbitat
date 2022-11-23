@@ -13,6 +13,8 @@
 @import "components/index";
 @import "pages/index";
 @import "pages/forms";
+@import "pages/show";
+
 
 
 a:-webkit-any-link {
@@ -45,7 +47,7 @@ a:-webkit-any-link {
 #logo {
   display: flex;
   cursor: pointer;
-} 
+}
 
 #o {
   font-style: oblique 20deg;
