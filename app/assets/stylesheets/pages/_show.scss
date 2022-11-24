@@ -1,3 +1,79 @@
-#image_reservation {
-  border-radius: 20px;
+#image-index {
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 0px solid #c5c5c5;
+  width: 600px;
+  height: 350px;
+}
+
+#description-index {
+  margin-top: 20px;
+  padding: 20px;
+  line-height: 8px;
+  width: 600px;
+}
+
+#infinite-text {
+  margin-top: 20px ;
+  text-align: center;
+  border-bottom: 0.5px solid black;
+}
+
+
+#price-reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#price {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.description-list {
+  font-weight: bold;
+  padding-right: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.description-list-a {
+  font-weight: bold;
+  font-size: 28px;
+  padding-right: 10px;
+
+}
+
+.desc-flex {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 500px;
+}
+
+.price-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#external-fee {
+  margin-top: 20px;
+  border-bottom: 0.5px solid black;
+}
+
+#total {
+  margin-top: 40px;
+  font-weight: bolder;
+}
+
+#title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: black
+}
+
+.description-text {
+  color: rgb(0, 0, 0);
 }

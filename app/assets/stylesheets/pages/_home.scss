@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 
+
 .center {
   position: absolute;
   margin-top: -100px;
@@ -43,4 +44,41 @@
   flex-wrap: wrap;
   list-style-type: none;
   color:rgb(0, 0, 0);
+}
+
+.mb-2 {
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mb-2:hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+  cursor: pointer;
+  }
+
+.pricereview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+}
+
+.rating {
+  margin-top: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+}
+
+.text-black {
+  text-decoration: none;
+  margin-top: 5px;
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+}
+
+.text-desc {
+  cursor: pointer;
+  margin-top: -5px;
 }
