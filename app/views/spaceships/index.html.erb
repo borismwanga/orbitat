@@ -12,25 +12,26 @@
   <div class="container">
     <div class="row">
       <% @spaceships.each do |spaceship| %>
-        <div class="col-md-4 card-link">
-          <%= link_to spaceship_path(spaceship) do %>
-            <figure>
-              <% if spaceship.photo.attached? %>
-                <%= cl_image_tag(spaceship.photo, class:"mb-2")%>
-              <% else%>
-                <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
-              <% end%>
-              <figcaption class="outside">
-                <h2 class="text-black"><span><%=spaceship.name%></span></h2>
-                <div class="pricereview">
-                  <p class="medium text-black mb-0"><%=spaceship.price%>㉿ | day</p>
-                  <p class="rating text-black">★5.0</p>
-                </div>
-                <p class="text-desc"><%=spaceship.description%></p>
-              </figcaption>
-            </figure>
-          <%end%>
-        </div>
+
+      <div class="col-md-4 card-link">
+      <%= link_to spaceship_path(spaceship) do %>
+        <figure>
+          <% if spaceship.photo.attached? %>
+            <%= cl_image_tag(spaceship.photo.key, class:"mb-2")%>
+          <% else%>
+            <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
+          <% end%>
+          <figcaption class="outside">
+            <h2 class="text-black"><span><%=spaceship.name%></span></h2>
+          <div class="pricereview">
+            <p class="small text-black mb-0"><em>㉿<%=spaceship.price%></em> day</p>
+            <p class="rating text-black">★5.0</p>
+          </div>
+            <p class="text-desc"><%=spaceship.description%></p>
+          </figcaption>
+        </figure>
+      <%end%>
+      </div>
      <% end %>
     </div>
   </div>
