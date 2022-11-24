@@ -4,15 +4,12 @@
       <h2>Profile </h2>
       <p>Add a spaceship, check your reviews or change your data......</p>
 
-      <h3>Your spacships here:</h3>
+      <p><%= link_to "Your spaceships", my_spaceships_spaceships_path %></p>
+      <p> Your reviews LINK HERE </p>
+      <p><%= link_to "Change your profile data", edit_user_registration_path %></p>
+      <p><%= link_to "Back to renting", spaceships_path %></p>
 
-      <h3>Your reviews here:</h3>
 
-      <h3>Change your profile data </h3>
     </div>
-    <div class="row">
-      <div class="btn btn-ghost">
-        <%= link_to "Back to renting a spaceships", "spaceships#index", class: "nav-link" %>
-      </div>
   </div>
 </section>
