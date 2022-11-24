@@ -1,7 +1,7 @@
 <div class="reservation-form">
   <%= simple_form_for [@spaceship, @reservation] do |f| %>
-    <%= f.input :start_date, label: "From", placeholder: 'yyyy/mm/dd', required: true %>
-    <%= f.input :end_date, label: "To", placeholder: 'yyyy/mm/dd', required: true %>
+    <%= f.input :start_date, label: "From", as: :date, html5: true %>
+    <%= f.input :end_date, label: "To", as: :date, html5: true %>
     <div class="reservation-submit">
       <%= f.submit %>
     </div>

@@ -43,7 +43,7 @@
         <div class="dropdown">
           <div class="avatar"></div >
           <div class="dropdown-content">
-          <% if user_signed_in? %>  
+          <% if user_signed_in? %>
           <p><%=link_to "Profile", users_path%></p>
           <p><%=link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}%></p>
           <%else%>
@@ -56,8 +56,7 @@
     </div>
 
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render "shared/flashes" %>
     <%= yield %>
     <div class="footer">
       <div class="footer-content">
