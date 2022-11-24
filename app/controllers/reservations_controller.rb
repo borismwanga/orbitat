@@ -9,9 +9,11 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     @reservation.spaceship = @spaceship
     @reservation.user = current_user
-    @reservation.save
-    redirect_to root_path
-
+    if @reservation.save
+      redirect_to root_path
+    else
+      flash[:alert] = "The end date must be after the start date."
+    end
   end
 
   def show
