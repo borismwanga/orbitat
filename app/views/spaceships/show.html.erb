@@ -1,20 +1,66 @@
 <div class="form-block">
-  <div>
-    <img src="https://loremflickr.com/380/400/spaceships" class="mb-2" id="image_reservation" alt="">
+  <div class="left-block">
+    <div>
+      <img src="https://loremflickr.com/380/400/spaceships" class="mb-2" id="image-index" alt="">
+    </div>
+    <div class="desc-flex">
+      <p id="title"><%=  @spaceship.name %></p>
+    </div>
+    <div id="description-index">
+      <div class="desc-flex">
+        <p class="description-list">Capacity:</p>
+        <p class="description-text"><%= @spaceship.capacity %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Speed Of Light:</p>
+        <p class="description-text"><%= @spaceship.speed_of_light %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Category:</p>
+        <p class="description-text"><%= @spaceship.category %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Location:</p>
+        <p class="description-text"><%= @spaceship.location %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Description:</p>
+        <p class="description-text"><%= @spaceship.description %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Brand:</p>
+        <p class="description-text"><%= @spaceship.brand %></p>
+      </div>
+    </div>
   </div>
   <div class="form-container">
-    <h1><%= @spaceship.name %></h1>
-    <p>Name: <%=  @spaceship.name%></p>
-    <p>Category: <%= @spaceship.category %></p>
-    <p>Location: <%= @spaceship.location %></p>
-    <p>description: <%= @spaceship.description %></p>
-    <p>capacity: <%= @spaceship.capacity %></p>
-    <p>speed of light: <%= @spaceship.speed_of_light %></p>
-    <p>brand: <%= @spaceship.brand %></p>
     <div>
+    <div id="price-reviews">
+      <p id="price">17990㉿</p>
+      <p>★3.8 | 1001 reviews</p>
+    </div>
     <%= render 'shared/form'%>
     <%# <%= cl_image_tag("X-wing_2_Fathead_zcfe3q",
           width: 400, height: 300, crop: :fill) %>
+    </div>
+    <div id="infinite-text">
+      <p>To the infinite and beyond...</p>
+    </div>
+    <div id="external-fee">
+      <div class="price-flex">
+        <p class="description-list">Docking Fee</p>
+        <p>2000㉿</p>
+      </div>
+      <div class="price-flex">
+        <p class="description-list">Powering Fee</p>
+        <p>20000㉿</p>
+      </div>
+    </div>
+    <div id="total">
+      <div class="price-flex">
+        <p class="description-list">TOTAL</p>
+        <p>134990㉿</p>
+      </div>
     </div>
   </div>
 </div>

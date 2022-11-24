@@ -11,11 +11,12 @@
 
 .form-container {
   padding: 40px;
-  width: 500px;
+  width: 450px;
+  height: fit-content;
   background-color: #ffffff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 0px solid #c5c5c5;
-  border-radius: 25px;
+  border-radius: 35px;
 
 
   h2 {
@@ -35,7 +36,7 @@
 .form-actions {
   background-color: rgb(227, 227, 227);
   text-align: center;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-bottom: 10px;
   font-weight: 600;
   cursor: pointer;
@@ -44,8 +45,47 @@
 .form-actions:hover {
   background-color: rgb(184, 183, 255);
   text-align: center;
-  border-radius: 20px;
+  border-radius: 5px;
   margin-bottom: 10px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.reservation-submit {
+  background-color: rgb(184, 183, 255);
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.reservation-submit:hover {
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.363);
+  border: 0px solid #c5c5c5;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reservation-choice {
+  border-top: 1px solid rgb(163, 163, 163);
+  border-bottom: 1px solid rgb(163, 163, 163);
+  padding: 10px;
+}
+
+.reserve-button {
+  border: none;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.start-date-form {
+  background-color: #ffffff;
+  margin-bottom: 10px;
 }
