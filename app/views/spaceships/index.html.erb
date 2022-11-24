@@ -1,4 +1,4 @@
-<%# 
+<%#
 <span class="center"> Have a nice journey among the stars </span>
 
 
@@ -15,7 +15,7 @@
       <p>Lorem Ipsum......</p>
     </div>
     <div class="row">
-    
+
       <% @spaceships.each do |spaceship| %>
       <div class="col-md-4 card-link">
       <%= link_to spaceship_path(spaceship) do %>
@@ -28,12 +28,12 @@
             <p class="small text-color mb-0"><%=spaceship.price%> $$</p>
             <p class="text-desc"><%=spaceship.description%></p>
           </figcaption>
-        </figure> 
+        </figure>
       <%end%>
       </div>
-     <% end %>       
+     <% end %>
 
     </div>
-    
+
   </div>
 </section>
