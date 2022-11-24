@@ -1,10 +1,8 @@
 class ReservationsController < ApplicationController
-  def new
-    @spaceship = Spaceship.find(params[:spaceship_id])
-    @reservation = Reservation.new
-  end
+  skip_before_action :authenticate_user!, only: [:create]
 
   def create
+    flash[:alert] = "Please login first" unless current_user
     @spaceship = Spaceship.find(params[:spaceship_id])
     @reservation = Reservation.new(reservation_params)
     @reservation.spaceship = @spaceship
@@ -12,7 +10,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to root_path
     else
-      flash[:alert] = "The end date must be after the start date."
+      render "spaceships/show", status: :unprocessable_entity
     end
   end
 
@@ -31,4 +29,5 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:start_date, :end_date)
   end
+
 end

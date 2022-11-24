@@ -1,8 +1,8 @@
 <div class="reservation-form">
   <%= simple_form_for [@spaceship, @reservation] do |f| %>
     <div class="reservation-choice">
-      <%= f.input :start_date, label: "Arrival", placeholder: 'dd/mm/yyyy', required: true, class: "start-date-form" %>
-      <%= f.input :end_date, label: "Departure", placeholder: 'dd/mm/yyyy', required: true, class: "start-date-form" %>
+      <%= f.input :start_date, label: "From", as: :date, html5: true %>
+    <%= f.input :end_date, label: "To", as: :date, html5: true %>
     </div>
     <div class="reservation-submit">
       <%= f.button :submit, "BOOK IT", class: "reserve-button" %>
