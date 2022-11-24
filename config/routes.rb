@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :reservations, except: [:index, :edit, :update]
       collection do
         get :my_spaceships
+        get :my_bookings
       end
   end
 end
