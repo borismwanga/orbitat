@@ -1,8 +1,7 @@
 <div class="form-block">
   <div class="left-block">
     <div>
-      <img src="https://loremflickr.com/380/400/spaceships" class="mb-2" id="image-index" alt="">
-    </div>
+      <%= cl_image_tag @spaceship.photo.key, height: 380, width: 400, crop: :fill %>    </div>
     <div class="desc-flex">
       <p id="title"><%=  @spaceship.name %></p>
     </div>
@@ -64,3 +63,4 @@
     </div>
   </div>
 </div>
+
