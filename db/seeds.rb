@@ -9,7 +9,8 @@
 require 'faker'
 require "open-uri"
 
-# user
+User.destroy_all
+Spaceship.destroy_all
 
 125.times {
     rand = SecureRandom.alphanumeric
