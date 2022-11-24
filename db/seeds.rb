@@ -22,8 +22,8 @@ require "open-uri"
     capacity = rand(10000)
     randCategroy = ('A'..'E').to_a.sample
     speed = [true, false].sample
-    user = (5..45).to_a.sample
-    sp = Spaceship.new(name:Faker::Movies::StarWars.vehicle, category: randCategroy, location: Faker::Movies::StarWars.planet ,price:Faker::Number.between(from: 200.0, to: 10000.0) ,description: Faker::Movies::StarWars.quote, speed_of_light: speed, capacity: capacity, fuel_drive: Faker::Science.element_state, brand: Faker::Space.company, user_id: user)
+    user = User.all.to_a.sample
+    sp = Spaceship.new(name:Faker::Movies::StarWars.vehicle, category: randCategroy, location: Faker::Movies::StarWars.planet ,price:Faker::Number.between(from: 200.0, to: 10000.0) ,description: Faker::Movies::StarWars.quote, speed_of_light: speed, capacity: capacity, fuel_drive: Faker::Science.element_state, brand: Faker::Space.company, user: user)
     sp.photo.attach(io: file, filename: "spaceship.jpg", content_type: "image/jpg")
     sp.save
 }
