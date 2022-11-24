@@ -16,6 +16,10 @@ class SpaceshipsController < ApplicationController
     @spaceships = Spaceship.all.where(user: current_user)
   end
 
+  def my_bookings
+    @reservations = Reservation.all.where(user: current_user)
+  end
+  
   def create
     @spaceship = Spaceship.new(spaceship_params)
     if @spaceship.save
