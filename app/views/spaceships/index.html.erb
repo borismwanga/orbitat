@@ -5,27 +5,28 @@
 <div class = "container"> <h1>lorem<h1><br>
 <h1>lorem<h1><br>
 
-<h1>lorem<h1><br>
+<h1>lorem<h1><br> %>
 
-</div> %>
+</div>
 <section id="boat_services" class="my-5">
   <div class="container">
-    <div class="title mb-1">
-      <h2>Lorem Ipsum </h2>
-      <p>Lorem Ipsum......</p>
-    </div>
     <div class="row">
 
       <% @spaceships.each do |spaceship| %>
       <div class="col-md-4 card-link">
       <%= link_to spaceship_path(spaceship) do %>
         <figure>
-          <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
-          <figcaption class="inside">
-            <h2 class="text-white"><span><%=spaceship.name%></span></h2>
-          </figcaption>
+          <% if spaceship.photo.attached? %>
+            <%= cl_image_tag(spaceship.photo, class:"mb-2")%>
+          <% else%>
+            <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
+          <% end%>
           <figcaption class="outside">
-            <p class="small text-color mb-0"><%=spaceship.price%> $$</p>
+            <h2 class="text-black"><span><%=spaceship.name%></span></h2>
+          <div class="pricereview">
+            <p class="small text-black mb-0"><em>㉿<%=spaceship.price%></em> day</p>
+            <p class="rating text-black">★5.0</p>
+          </div>
             <p class="text-desc"><%=spaceship.description%></p>
           </figcaption>
         </figure>
