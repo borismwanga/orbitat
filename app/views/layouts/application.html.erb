@@ -61,17 +61,18 @@
     <div class="footer">
       <div class="footer-content">
         <ul class="footer-list-left">
-          <li class="footer-text">©2022, Orbitat Inc.</li>
-          <li><%= link_to "Privacy", "#", class: "footer-link" %></li>
-          <li><%= link_to "Terms", "#", class: "footer-link" %></li>
+
+          <%date = Date.today%>
+          <li class="footer-text">©<%= date.year  %>, Orbitat Inc.</li>
           <li><%= link_to "About", "#", class: "footer-link" %></li>
-          <li class="footer-text"><%= Time.now %></li>
+          <li><%= link_to "Assistance", "#", class: "footer-link" %></li>
+          <li><%= link_to "Privacy", "https://ec.europa.eu/info/law/law-topic/data-protection_en", target: "_blank", class: "footer-link" %></li>
+          <li><%= link_to "Terms",  "https://www.commissioner.brussels/en/i-am-an-expat/housing/82-housing/104-signing-a-lease", target: "_blank", class: "footer-link" %></li>
+
         </ul>
         <ul class="footer-list-right">
-          <li class="footer-text"></li>
-          <li class="footer-text">Eng</li>
-          <li class="footer-text"></li>
-          <li><%= link_to "Assistance", "#", class: "footer-link" %></li>
+          <li class="footer-text"><%= DateTime.now.next_year(50).strftime('%A - %d  - %B - %Y') %></li>
+
         </ul>
       </div>
     </div>
