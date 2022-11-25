@@ -1,33 +1,33 @@
 
 <section id="boat_services" class="my-5">
   <div class="container">
-  
+
     <div class="row">
       <% @spaceships.each do |spaceship| %>
-      <div class="col-md-4 card-link">
-      <%= link_to spaceship_path(spaceship) do %>
-        <figure>
-           <% if spaceship.photo.attached? %>
-      <%= cl_image_tag spaceship.photo.key, height: 380, width: 400, crop: :fill %>
-      <% else%>
-          <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
-        <% end%>
-          <figcaption class="inside">
-            <h2 class="text-black"><span><%=spaceship.name%></span></h2>
-          </figcaption>
-          <figcaption class="outside">
-            <p class="small text-black mb-0">Price:㉿<%=spaceship.price%>|day</p>
-            <p class="text-desc">Description:<%=spaceship.description%></p>
-            <p class="text-desc">Category:<%=spaceship.category%></p>
-            <p class="text-desc">location:<%=spaceship.location%></p>
-            <p class="text-desc">Capacity:<%=spaceship.capacity%></p>
-            <p class="text-desc">Brand:<%=spaceship.brand%></p>
-            <%= link_to "Edit", edit_spaceship_path(spaceship)%> /
-            <%= link_to "Delete", spaceship_path(spaceship),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-          </figcaption>
-        </figure>
-      <%end%>
-      </div>
+        <div class="col-md-4 card-link">
+        <%= link_to spaceship_path(spaceship) do %>
+          <figure>
+            <% if spaceship.photo.attached? %>
+              <%= cl_image_tag spaceship.photo.key, height: 380, width: 400, crop: :fill %>
+            <% else%>
+              <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
+            <% end%>
+            <figcaption class="inside">
+              <h2 class="text-black"><span><%=spaceship.name%></span></h2>
+            </figcaption>
+            <figcaption class="outside">
+              <p class="small text-black mb-0">Price:㉿<%=spaceship.price%>|day</p>
+              <p class="text-desc">Description:<%=spaceship.description%></p>
+              <p class="text-desc">Category:<%=spaceship.category%></p>
+              <p class="text-desc">location:<%=spaceship.location%></p>
+              <p class="text-desc">Capacity:<%=spaceship.capacity%></p>
+              <p class="text-desc">Brand:<%=spaceship.brand%></p>
+              <%= link_to "Edit", edit_spaceship_path(spaceship)%> /
+              <%= link_to "Delete", spaceship_path(spaceship),data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            </figcaption>
+          </figure>
+        <%end%>
+        </div>
       <%end%>
     </div>
   </div>
