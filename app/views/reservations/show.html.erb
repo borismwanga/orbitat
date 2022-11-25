@@ -1,6 +1,10 @@
 <div class="form-block">
   <div class="left-block">
     <div>
+      <p>Have a nice journey with <%=  @spaceship.name %> !</p>
+      <p>Here are the details of your reservation:</p>
+    </div>
+    <div>
       <%= cl_image_tag @spaceship.photo.key, height: 380, width: 400, crop: :fill %>    </div>
     <div class="desc-flex">
       <p id="title"><%=  @spaceship.name %></p>
@@ -28,18 +32,11 @@
       </div>
     </div>
   </div>
-  <div class="form-container">
-    <div>
+
+  <div>
     <div id="price-reviews">
-      <p id="price">17990㉿</p>
-      <p>★3.8 | 1001 reviews</p>
-    </div>
-    <%= render 'shared/form'%>
-    <%# <%= cl_image_tag("X-wing_2_Fathead_zcfe3q",
-          width: 400, height: 300, crop: :fill) %>
-    </div>
-    <div id="infinite-text">
-      <p>To the infinite and beyond...</p>
+      <p class="description-list">Price per day</p>
+      <p id="price"><%= (@spaceship.price).to_s + "㉿" %></p>
     </div>
     <div id="external-fee">
       <div class="price-flex">
@@ -54,8 +51,7 @@
     <div id="total">
       <div class="price-flex">
         <p class="description-list">TOTAL</p>
-        <p>134990㉿</p>
+        <p><%= ((((@reservation.end_date - @reservation.start_date).round) * @spaceship.price) + 22000).to_s + "㉿" %></p>
       </div>
     </div>
   </div>
-</div>
