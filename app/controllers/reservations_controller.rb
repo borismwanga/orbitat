@@ -16,6 +16,9 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+    @spaceship = Spaceship.find(params[:spaceship_id])
+    @reservation.spaceship = @spaceship
+    @reservation.user = current_user
   end
 
   def destroy
@@ -29,5 +32,7 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:start_date, :end_date)
   end
+
+
 
 end

@@ -13,14 +13,14 @@
   <body>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <div class="container-fluid">
-        <div id="logo">
-          <h1 id="o">Orb</h1>
-          <h1 id="rbita">i</h1>
-          <h1 id="t">taT</h1>
+        <div id="logo-1">
+          <%= link_to root_path, class: "navbar-brand" do %>
+            <div id="logo">
+              <h1 id="o">orbit</h1>
+              <h1 id="at">@</h1>
+            </div>
+          <% end %>
         </div>
-        <%# <%= link_to "#", class: "navbar-brand" do %>
-          <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-        <%# <% end %>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -58,25 +58,22 @@
 
       </div>
     </div>
-
-
     <%= render "shared/flashes" %>
     <%= yield %>
     <div class="footer">
       <div class="footer-content">
         <ul class="footer-list-left">
-          <li class="footer-text">©2022, Orbitat Inc.</li>
-          <li class="footer-text"><%= link_to "Privacy", "#" %></li>
-          <li class="footer-text"><%= link_to "Terms", "#" %></li>
+          <%date = Date.today%>
+          <li class="footer-text">©<%= date.year  %>, Orbitat Inc.</li>
           <li class="footer-text"><%= link_to "About", "#" %></li>
-          <li class="footer-text"><%= Time.now %></li>
+          <li class="footer-text"><%= link_to "Assistance", "#" %></li>
+          <li class="footer-text"><%= link_to "Privacy", "https://ec.europa.eu/info/law/law-topic/data-protection_en", target: "_blank" %></li>
+          <li class="footer-text"><%= link_to "Terms",  "https://www.commissioner.brussels/en/i-am-an-expat/housing/82-housing/104-signing-a-lease", target: "_blank" %></li>
 
         </ul>
         <ul class="footer-list-right">
-          <li class="footer-text"></li>
-          <li class="footer-text">Eng</li>
-          <li class="footer-text"></li>
-          <li class="footer-text"><%= link_to "Assistance", "#" %></li>
+          <li class="footer-text"><%= DateTime.now.next_year(50).strftime('%A - %d  - %B - %Y') %></li>
+
         </ul>
       </div>
     </div>

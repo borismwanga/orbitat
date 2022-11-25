@@ -14,6 +14,7 @@
 @import "pages/index";
 @import "pages/forms";
 @import "pages/show";
+@import "pages/profile";
 
 
 
@@ -47,8 +48,17 @@ body {
   width: 30px;
 }
 
+#logo-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
 #logo {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -56,9 +66,9 @@ body {
   font-style: oblique 20deg;
 }
 
-
-#t {
-  font-style: oblique -20deg;
+#at {
+  margin-bottom: 30px;
+  font-size: 25px;
 }
 
 h1 {
@@ -108,6 +118,8 @@ h1 {
 
 .nav-link {
   color: black;
+  font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 #add-spaceship {
