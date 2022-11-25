@@ -204,3 +204,55 @@ margin-right: 10px;
   text-decoration: none !important;
   cursor: pointer !important;
 }
+
+.form-actions {
+  cursor: pointer !important;
+}
+
+.form-inputs {
+  margin-top: 20px;
+}
+
+.form-link {
+  cursor: pointer !important;
+  color: rgb(0, 0, 0);
+}
+
+.form-link:hover {
+  cursor: pointer !important;
+  color: rgb(146, 144, 252);
+}
+
+.form-link-a {
+  cursor: pointer !important;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+}
+
+.form-link-a:hover {
+  cursor: pointer !important;
+  color: rgb(146, 144, 252);
+}
+
+.title-login {
+  font-weight: 500 !important;
+  color: black !important;
+}
+
+.profile-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500 !important;
+  color: rgb(0, 0, 0) !important;
+  margin-bottom: 30px !important;
+}
+
+.profile-page {
+  line-height: 10px;
+  margin-top: 50px;
+  padding: 40px;
+}
+
+.ab {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
