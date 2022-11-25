@@ -1,7 +1,11 @@
 <div class="form-block">
   <div class="left-block">
     <div>
-      <%= cl_image_tag @spaceship.photo.key, class: "image-index" %>
+      <% if @spaceship.photo.attached? %>
+      <%= cl_image_tag @spaceship.photo.key, height: 380, width: 400, crop: :fill %>
+      <% else%>
+          <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
+        <% end%>
     </div>
     <div class="desc-flex">
       <p id="title"><%=  @spaceship.name %></p>

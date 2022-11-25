@@ -26,7 +26,7 @@ class SpaceshipsController < ApplicationController
   def my_bookings
     @reservations = Reservation.all.where(user: current_user)
   end
-  
+
   def create
     @spaceship = Spaceship.new(spaceship_params)
     @spaceship.user = current_user
@@ -51,6 +51,9 @@ class SpaceshipsController < ApplicationController
   end
 
   def destroy
+    @spaceship = Spaceship.find(params[:id])
+    @spaceship.destroy
+    redirect_to spaceship_path(@spaceship), status: :see_other
   end
 
   private
