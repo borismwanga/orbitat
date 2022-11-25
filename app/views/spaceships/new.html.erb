@@ -1,26 +1,26 @@
 <div class="container py-5">
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h3>Add a new spaceship</h3>
+      <div class="creation-box">
+        <h3 class="new-title">ADD YOUR SPACESHIP</h3>
         <%= simple_form_for [@user, @spaceship] do |f| %>
-            <%= f.input :name, placeholder: 'Name of the spaceship' %>
+            <%= f.input :name, placeholder: 'Name of the spaceship', class: "new-text" %>
             <%= f.label  (capture do %>
                 <%= "Category"%>
-            <% end) %>
-            <%= f.select :category, [["A"], ["B"], ["C"], ["D"], ["E"]] %>
-            <%= f.input :location, placeholder: 'Location' %>
-            <%= f.input :capacity, placeholder: 'capacity' %>
-            <%= f.input :price, placeholder: 'Price' %>
-            <%= f.input :photo, as: :file %>
-            <%= f.input :description, as: :text, :input_html => { class: 'test', :cols => 5, :rows => 10 } %>
+            <% end), class: "new-text" %>
+            <%= f.select :category, [["A"], ["B"], ["C"], ["D"], ["E"]], class: "new-text" %>
+            <%= f.input :location, placeholder: 'Location', class: "new-text" %>
+            <%= f.input :capacity, placeholder: 'capacity', class: "new-text" %>
+            <%= f.input :price, placeholder: 'Price', class: "new-text" %>
+            <%= f.input :photo, as: :file, class: "new-text" %>
+            <%= f.input :description, as: :text, :input_html => { class: 'test', :cols => 5, :rows => 10 }, class: "new-text" %>
             <%= f.label  (capture do %>
                 <%= "Speed of light"%>
-            <% end) %>
-            <%= f.select :speed_of_light,  [['Yes', true], ['No', false]]%>
-            <%= f.input :fuel_drive, placeholder: 'Fuel Drive' %>
-            <%= f.input :brand, placeholder: 'Brand' %>
-          <%= f.submit class: 'btn btn-flat' %>
+            <% end), class: "new-text" %>
+            <%= f.select :speed_of_light,  [['Yes', true], ['No', false]], class: "new-text"%>
+            <%= f.input :fuel_drive, placeholder: 'Fuel Drive', class: "new-text" %>
+            <%= f.input :brand, placeholder: 'Brand', class: "new-text" %>
+          <%= f.submit class: 'button' %>
         <% end %>
       </div>
     </div>
