@@ -9,6 +9,8 @@
 require 'faker'
 require "open-uri"
 
+Reservation.destroy_all
+
 Spaceship.destroy_all
 User.destroy_all
 

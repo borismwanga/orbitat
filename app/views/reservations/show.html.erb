@@ -1,0 +1,57 @@
+<div class="form-block">
+  <div class="left-block">
+    <div>
+      <p>Have a nice journey with <%=  @spaceship.name %> !</p>
+      <p>Here are the details of your reservation:</p>
+    </div>
+    <div>
+      <%= cl_image_tag @spaceship.photo.key, height: 380, width: 400, crop: :fill %>    </div>
+    <div class="desc-flex">
+      <p id="title"><%=  @spaceship.name %></p>
+    </div>
+    <div id="description-index">
+      <div class="desc-flex">
+        <p class="description-list">Capacity:</p>
+        <p class="description-text"><%= @spaceship.capacity %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Speed Of Light:</p>
+        <p class="description-text"><%= @spaceship.speed_of_light %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Category:</p>
+        <p class="description-text"><%= @spaceship.category %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Location:</p>
+        <p class="description-text"><%= @spaceship.location %></p>
+      </div>
+      <div class="desc-flex">
+        <p class="description-list">Brand:</p>
+        <p class="description-text"><%= @spaceship.brand %></p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div id="price-reviews">
+      <p class="description-list">Price per day</p>
+      <p id="price"><%= (@spaceship.price).to_s + "㉿" %></p>
+    </div>
+    <div id="external-fee">
+      <div class="price-flex">
+        <p class="description-list">Docking Fee</p>
+        <p>2000㉿</p>
+      </div>
+      <div class="price-flex">
+        <p class="description-list">Powering Fee</p>
+        <p>20000㉿</p>
+      </div>
+    </div>
+    <div id="total">
+      <div class="price-flex">
+        <p class="description-list">TOTAL</p>
+        <p><%= ((((@reservation.end_date - @reservation.start_date).round) * @spaceship.price) + 22000).to_s + "㉿" %></p>
+      </div>
+    </div>
+  </div>
