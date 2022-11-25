@@ -8,7 +8,7 @@ class ReservationsController < ApplicationController
     @reservation.spaceship = @spaceship
     @reservation.user = current_user
     if @reservation.save
-      redirect_to root_path
+      redirect_to spaceship_reservation_path(@spaceship, @reservation)
     else
       render "spaceships/show", status: :unprocessable_entity
     end
@@ -19,7 +19,6 @@ class ReservationsController < ApplicationController
     @spaceship = Spaceship.find(params[:spaceship_id])
     @reservation.spaceship = @spaceship
     @reservation.user = current_user
-    # @total = (@reservation.end_date - @reservation.start_date) * @spaceship.price
   end
 
   def destroy
