@@ -15,6 +15,8 @@
 @import "pages/forms";
 @import "pages/show";
 @import "pages/profile";
+@import "pages/new";
+
 
 
 
@@ -28,6 +30,12 @@ body {
   background-color: rgb(249, 249, 249);
 }
 
+.main-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
 .container-fluid {
   display: flex;
   justify-content: space-between;
@@ -36,13 +44,13 @@ body {
 }
 
 .navbar-lewagon {
+  margin-bottom: -60px;
   justify-content: space-between;
   background: rgb(255, 255, 255);
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -50,6 +58,7 @@ body {
 }
 
 #logo-1 {
+  margin-left: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,19 +87,15 @@ h1 {
   margin-right: 7px;
 }
 
-.search-form-control {
-  position: relative;
+.form-control {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.225);
+  border-radius: 25px;
 }
 
-.search-form-control .btn {
-  position: absolute;
-  top: 2px;
-  bottom: 4px;
-  right: 4px;
-  cursor: pointer;
-}
-
-.search-form-control .form-control:focus{
+.form-control:focus {
   background-color: #ffffff;
   height: 2.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
@@ -98,12 +103,10 @@ h1 {
   border-radius: 25px;
 }
 
-.search-form-control .form-control {
+.search-button {
   background-color: #ffffff;
-  border: 1px solid #ffffff;
+  border: 0px solid #ffffff00;
   outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.13);
-  border-radius: 25px;
 }
 
 .nav-item-one {
@@ -119,6 +122,12 @@ h1 {
 
 .nav-link {
   color: black;
+  font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.nav-link:hover {
+  color: rgb(164, 162, 252) !important;
   font-weight: 500;
   font-family: 'Space Grotesk', sans-serif;
 }
@@ -139,6 +148,7 @@ h1 {
 .avatar {
   margin-left: 45px;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 .span {
@@ -173,4 +183,20 @@ h1 {
   left: 50%;
   transform: translate(-50%, -25%);
   font-size: 86px;
+}
+
+.dropdown {
+margin-right: 10px;
+}
+
+.dropdown-text {
+  font-weight: 500 !important;
+  color: black !important;
+  text-decoration: none !important;
+}
+
+.dropdown-text:hover {
+  font-weight: 500 !important;
+  color: rgb(164, 162, 252) !important;
+  text-decoration: none !important;
 }

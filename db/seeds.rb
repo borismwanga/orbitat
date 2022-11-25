@@ -10,14 +10,10 @@ require 'faker'
 require "open-uri"
 
 Reservation.destroy_all
-<<<<<<< HEAD
-=======
-
->>>>>>> origin
 Spaceship.destroy_all
 User.destroy_all
 
-125.times {
+25.times {
     rand = SecureRandom.alphanumeric
     User.create(first_name: Faker::Name.first_name  , last_name: Faker::Name.last_name , email:Faker::Internet.email, phone_number:Faker::PhoneNumber.cell_phone, space_driving_license: rand, password:"123456",)
 }

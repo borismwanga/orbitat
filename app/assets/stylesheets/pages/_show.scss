@@ -1,9 +1,14 @@
+.form-block {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 .image-index {
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 0px solid #c5c5c5;
-  width: 600px;
-  height: 400px;
+  width: 75%;
 }
 
 #description-index {
@@ -45,7 +50,6 @@
 .desc-flex {
   display: flex;
   align-items: center;
-  justify-content: left;
   width: 500px;
 }
 

@@ -65,14 +65,10 @@
   cursor: pointer;
 }
 
-.rating {
-  margin-top: 10px;
-  font-family: 'Space Grotesk', sans-serif;
-  cursor: pointer;
-}
+
 
 .text-black {
-  text-decoration: none;
+  text-decoration: none !important;
   margin-top: 5px;
   font-family: 'Space Grotesk', sans-serif;
   cursor: pointer;
