@@ -63,16 +63,17 @@
     <div class="footer">
       <div class="footer-content">
         <ul class="footer-list-left">
-          <li class="footer-text">©2022, Orbitat Inc.</li>
+          <%date = Date.today%>
+          <li class="footer-text">©<%= date.year  %>, Orbitat Inc.</li>
           <li class="footer-text"><%= link_to "Privacy", "#" %></li>
           <li class="footer-text"><%= link_to "Terms", "#" %></li>
           <li class="footer-text"><%= link_to "About", "#" %></li>
-          <li class="footer-text"><%= Time.now %></li>
+          <li class="footer-text"><%= "#{Date::MONTHNAMES[date.month]} - #{date.day}" %></li>
+
 
         </ul>
         <ul class="footer-list-right">
           <li class="footer-text"></li>
-          <li class="footer-text">Eng</li>
           <li class="footer-text"></li>
           <li class="footer-text"><%= link_to "Assistance", "#" %></li>
         </ul>
