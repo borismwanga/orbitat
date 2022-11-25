@@ -63,18 +63,21 @@
   align-items: center;
   font-family: 'Space Grotesk', sans-serif;
   cursor: pointer;
+  margin-bottom: 10px;
 }
-
-
 
 .text-black {
   text-decoration: none !important;
   margin-top: 5px;
   font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
   cursor: pointer;
 }
 
 .text-desc {
-  cursor: pointer;
-  margin-top: -5px;
+  margin-top: 5px !important;
+  cursor: pointer !important;
+  margin-top: -5px !important;
+  color: black !important;
+  font-weight: 300 !important;
 }
