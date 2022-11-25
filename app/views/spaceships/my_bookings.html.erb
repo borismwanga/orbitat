@@ -1,8 +1,8 @@
 
 <section id="boat_services" class="my-5">
   <div class="container">
-    <div class="title mb-1">
-      <h2>Your Spaceship</h2>
+    <div class="title-booking">
+      <h2 class="booking-title">Your Spaceship</h2>
     </div>
     <div class="row">
 
@@ -15,10 +15,8 @@
       <% else%>
           <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
         <% end%>
-          <figcaption class="inside">
-            <h2 class="text-white"><span><%=reservation.spaceship.name%></span></h2>
-          </figcaption>
           <figcaption class="outside">
+            <h2 class="image-title"><span><%=reservation.spaceship.name%></span></h2>
             <p class="small text-black mb-0">Total Price: ㉿ <%= (((reservation.end_date - reservation.start_date).round) * reservation.spaceship.price).to_i%></p>
             <p class="text-desc">Description: <%=reservation.spaceship.description%></p>
             <p class="text-desc">Your Name: <%= reservation.user.first_name %> <%= reservation.user.last_name %></p>

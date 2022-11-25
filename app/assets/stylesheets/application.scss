@@ -16,8 +16,7 @@
 @import "pages/show";
 @import "pages/profile";
 @import "pages/new";
-
-
+@import "pages/booking";
 
 
 
@@ -124,21 +123,25 @@ h1 {
   color: black;
   font-weight: 500;
   font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer !important;
 }
 
 .nav-link:hover {
   color: rgb(164, 162, 252) !important;
   font-weight: 500;
   font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer !important;
 }
 
 #add-spaceship {
   list-style-type: none;
+  cursor: pointer !important;
 }
 
 #add-spaceship:hover {
   list-style-type: none;
   color: rgb(144, 144, 144);
+  cursor: pointer !important;
 }
 
 .btn.btn-ghost {
@@ -193,10 +196,12 @@ margin-right: 10px;
   font-weight: 500 !important;
   color: black !important;
   text-decoration: none !important;
+  cursor: pointer !important;
 }
 
 .dropdown-text:hover {
   font-weight: 500 !important;
   color: rgb(164, 162, 252) !important;
   text-decoration: none !important;
+  cursor: pointer !important;
 }
