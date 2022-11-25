@@ -23,8 +23,10 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation = Reservation.find(params[:id])
+    @spaceship = Spaceship.find(params[:spaceship_id])
+
     @reservation.destroy
-    redirect_to spaceship_path(@spaceship), status: :see_other
+    redirect_to spaceship_path, status: :see_other
   end
 
   private
