@@ -1,1 +1,36 @@
-<h2>Your boookings</h2>
+
+<section id="boat_services" class="my-5">
+  <div class="container">
+    <div class="title mb-1">
+      <h2>Your Spaceship</h2>
+    </div>
+    <div class="row">
+
+            <% @reservations.each do |reservation| %>
+
+      <div class="col-md-4 card-link">
+        <figure>
+           <% if reservation.spaceship.photo.attached? %>
+      <%= cl_image_tag reservation.spaceship.photo.key, height: 380, width: 400, crop: :fill %>
+      <% else%>
+          <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
+        <% end%>
+          <figcaption class="inside">
+            <h2 class="text-white"><span><%=reservation.spaceship.name%></span></h2>
+          </figcaption>
+          <figcaption class="outside">
+            <p class="small text-black mb-0">Total Price: ㉿ <%= (((reservation.end_date - reservation.start_date).round) * reservation.spaceship.price).to_i%></p>
+            <p class="text-desc">Description: <%=reservation.spaceship.description%></p>
+            <p class="text-desc">Your Name: <%= reservation.user.first_name %> <%= reservation.user.last_name %></p>
+            <p class="text-desc">Number of day(s): <%= (reservation.end_date - reservation.start_date).round %></p>
+            <p class="text-desc">From: <%= reservation.start_date%> to: <%= reservation.end_date%></p>
+            <%= link_to "Delete", spaceship_reservation_path(reservation.spaceship.id, reservation.id) ,data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+          </figcaption>
+        </figure>
+      </div>
+     <% end %>
+
+    </div>
+
+  </div>
+</section>
