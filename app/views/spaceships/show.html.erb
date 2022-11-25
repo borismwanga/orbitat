@@ -1,7 +1,8 @@
 <div class="form-block">
   <div class="left-block">
     <div>
-      <%= cl_image_tag @spaceship.photo.key, height: 380, width: 400, crop: :fill %>    </div>
+      <%= cl_image_tag @spaceship.photo.key, class: "image-index" %>
+    </div>
     <div class="desc-flex">
       <p id="title"><%=  @spaceship.name %></p>
     </div>
@@ -59,4 +60,3 @@
     </div>
   </div>
 </div>
-
