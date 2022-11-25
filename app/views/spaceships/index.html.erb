@@ -16,9 +16,9 @@
         <%= link_to spaceship_path(spaceship) do %>
           <figure>
             <% if spaceship.photo.attached? %>
-              <%= cl_image_tag(spaceship.photo.key, class:"mb-2")%>
+              <%= cl_image_tag(spaceship.photo.key, :width => 460, :height => 380, class:"mb-2")%>
             <% else%>
-              <img src="https://loremflickr.com/380/400/spaceships" class="mb-2"alt="">
+              <img src="https://loremflickr.com/380/460/spaceships" class="mb-2"alt="">
             <% end%>
             <figcaption class="outside">
               <h2 class="text-black"><span><%=spaceship.name%></span></h2>
