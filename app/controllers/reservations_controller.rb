@@ -19,7 +19,6 @@ class ReservationsController < ApplicationController
     @spaceship = Spaceship.find(params[:spaceship_id])
     @reservation.spaceship = @spaceship
     @reservation.user = current_user
-    # @total = (@reservation.end_date - @reservation.start_date) * @spaceship.price
   end
 
   def destroy
